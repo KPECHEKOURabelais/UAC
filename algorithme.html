@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Algorithme </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Bootstrapp/css/bootstrap.min.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark fixed-top bg-dark">
+          <p id="rab-store">
+              Rab Store
+          </p>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01"
+            aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon " id="#haut"></span>
+          </button>
+    
+          <div class="text-right collapse navbar-collapse" id="navbarsExample01">
+            <ul class="navbar-nav mr-auto  ">
+    
+              <li class="nav-item">
+                <a class="transition" class="nav-link" href="accueil.html" >Accueil</a>
+              </li>    
+              <li class="nav-item">
+                <a class="transition" class="nav-link" href="plan_du_site.html" >Plan du Site</a>
+              </li>
+    
+    
+              <li class="nav-item">
+                <a class="transition" class="nav-link" href="#contacts">Contacts</a>
+              </li>
+    
+            </ul>
+    
+          </div>
+        </nav>
+        <pre>
+
+
+
+
+        </pre>
+      </header>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+      </script>
+      <script>
+        window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')
+      </script>
+      <script src="popper.min.js"></script>
+      <script src="Bootstrapp/js/bootstrap.min.js"></script>
+    <section>
+        <article class="algo">
+            <div class="Exo">
+            <h1> Initiation à l’algorithmique </h1>
+            <h3> Exercice 1 : </h3>
+            <p>
+            Ecrire un algorithme qui permet d’afficher le résultat d’un étudiant (accepté ou rejeté) à un module, sachant que ce module est évalué par une note d’oral de coefficient 1, et une note d’écrit de coefficient 2. La moyenne obtenue doit-être supérieure ou égale à 10 pour valider le module. Comme entrées, on a la note d’oral et la note d’écrit, ensuite on calcule la moyenne, et on affiche le résultat.
+            </p>
+            <div class="encouragement">
+                <p>
+                    Encourager l'auteur du site web 
+                </p>
+                <a href="tel:+22999803579"> Donation </a>
+            </div>
+            <pre>
+            
+            </pre>  
+            <p>
+                Le corrigé de cet exercice se trouve ci-joint un peu après à l'énoncé. Découvrons d'abord les énoncés de ces exercices de l'examen de la session de Mai de l'ENEAM IG 1.
+            </p>
+            <span class="puce"> ► </span> <a href="#exo1" style="color : #525525; text-decoration : underline;"> Corrigé Exo 1 </a>
+            <h3> Exercice 2 : </h3>
+            <p>
+			Ecrire un algorithme qui calcule et affiche le ticket de caisse de la façon suivante : 
+            <ul>
+                <li> Saisir le prix HT du produit </li>
+                <li> Saisir la quantité </li>
+                <li> Et ceci jusqu’à ce que la caissière termine en tapant 0 comme prix unitaire </li>
+                <li> Saisir alors le pourcentage de remise auquel le client à droit. </li>
+            </ul>
+
+            Afficher le prix total à payer en ajoutant la TVA à 18% en déduisant la remise.
+
+            </p>
+            <p>
+            <span class="puce"> ► </span> <a href="#exo2" style="color : #525525; text-decoration : underline;"> Corrigé Exo 2 </a>
+            </p>
+            <p>
+                <h3> Exercice 3 : </h3>
+            
+		On considère des candidats inscrits à une formation diplômante. Chaque candidat va obtenir une note pour cette formation. 
+        Ecrire l’algorithme permettant d’afficher la liste des candidats dont la note est supérieure ou égale à la moyenne des notes de
+        <span  id="exo1"> tous les <span> candidats (les noms des candidats et les notes étant lus à partir du clavier, et stockés dans des tableaux).
+
+            </p>
+            <span class="puce"> ► </span> <a href="#exo3" style="color : #525525; text-decoration : underline;"> Corrigé Exo 3 </a>
+            </div>
+            <div class="corrige">
+                    <div id="exo1">
+                        <h3> Corrigé 1 : </h3>
+                    </div>
+                    <div class="tab-corrige">
+                        <p> Algorithme  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Résultat d’un étudiant ;</p>
+                        <p> Variable <br>
+                         note_ecrit, note_orale, moy : réel ;<br>
+                         Début <br>
+                         Ecrireln(‘’Entrer la note d’oral de l’étudiant : ‘’) ; <br>
+		                 Lire(note_oral) ; <br>
+		                 Ecrireln(‘’Entrer la note d’écrit de l’ étudiant : ‘’) ; <br>
+		                 Lire(note_ecrit) ; <br>
+	                 	moy ← ( 2*note_ecrit + note_oral ) / 3 ; <br>
+                		SI moy >= 10 ALORS <br>
+	            	    &nbsp &nbsp &nbsp 	Ecrireln(‘’Accepté’’) ; <br>
+                		SINON <br> 
+			               &nbsp &nbsp &nbsp  Ecrireln(‘’Rejeté’’) ; <br>
+                		Fin.
+                    </div>
+            </div>
+            <div class="corrige">
+                    <div id="exo2">
+                        <h3> Corrigé 2 : </h3>
+                    </div>
+                    <div class="tab-corrige">
+                        <p> Algorithme  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Ticket de caisse ;</p>
+                        <p> Variable <br>
+                        pht,  q, somme, percent, remise, pt, pt_ttc : entier ;<br>
+                         Début <br>
+                         Ecrire (‘’Entrer le prix unitaire du produit et la quantité payée par le client : ‘’) ; <br>
+		                 Lire(pht, q) ; <br>
+                         somme ←  pht*q ; <br>
+                         Tant que (prix_ht <> 0 ) faire <br>
+                         &nbsp &nbsp &nbsp Ecrire (‘’Entrer à nouveau le prix unitaire du produit et la quantité payée par le client : ‘’) ;<br>
+                         &nbsp &nbsp &nbsp Lire(prix_ht, q) ;<br>
+                         &nbsp &nbsp &nbsp somme ← somme + (pht*q) ;<br>
+                         FinTantQue <br>
+                         Ecrireln(‘’Saisissez le pourcentage de remise : ‘’) ;<br>
+                         Lire(percent) ; <br>
+                         remise ← (somme*percent)/100 ; <br>
+                        pt ← somme – remise ; <br>
+                        pt_ttc ← 1.18*pt ; <br>
+                        Ecrire(‘’Le prix total, la TVA inclue que doit payer le client est de ‘’, pt_ttc, ‘’f cfa. ‘’) ;<br>
+                        Fin.
+
+                    </div>
+            </div>
+            <div class="corrige">
+                    <div id="exo3">
+                        <h3> Corrigé 3 : </h3>
+                    </div>
+                    <div class="tab-corrige">
+                    <p> Algorithme 	&nbsp 	&nbsp 	&nbsp 	&nbsp 	&nbsp 	&nbsp Affichage d’une liste de candidats </p>
+	                <p>
+                    Variable <br>
+                	max ← 150 ; <br> 
+                    note[max], i, som : entier ; <br>
+                    moy : réel ; <br>
+                    nom[max] : chaine de caractère ; <br>
+                	Début <br> 
+	                som ← 0 ; <br>
+	                Pour i ← 0 à (max-1) faire <br>
+                    &nbsp 	&nbsp 	&nbsp  Ecrireln(‘’Entrer le nom de l’étudiant ‘’ , i+1 , ‘’ : ‘’ ) ;<br>
+                    &nbsp 	&nbsp 	&nbsp Lire(nom[i]) ; <br>
+                	&nbsp 	&nbsp 	&nbsp 	Ecrireln(‘’Entrer la note de l’étudiant ‘’, i+1, ‘’ : ‘’ ) ; <br>
+                	&nbsp 	&nbsp 	&nbsp 	Lire(note[i]) ; <br>
+                    &nbsp 	&nbsp 	&nbsp som ← som + note[i]; <br>
+                	FinPour<br>
+                	moy ← som / max ; <br>
+	                Ecrireln(‘’ ---------Liste des candidats------ ‘’) ; <br>
+	                Pour i ← 0 à (max-1) faire <br> 
+                    &nbsp 	&nbsp 	&nbsp  SI ( note[i] >= moy ) ALORS  <br>
+                    &nbsp 	&nbsp 	&nbsp 	&nbsp 	&nbsp 		Ecrireln(‘’ – ‘’,  nom[i] ) ;<br>
+                    &nbsp 	&nbsp 	&nbsp 	     FSI <br>
+                 	FinPour<br>
+                    Fin.
+
+                    </div>
+                    <div class="encouragement1">
+                <p>
+                    Encourager l'auteur du site web 
+                </p>
+                <a href="tel:+22999803579"> Donation </a>
+            </div>
+            <pre>
+
+            </pre>
+        </article>
+        <div class="pagination">
+            <div class="precedent">
+                <a href="plan_du_site.html"> << </a>
+            </div>
+            <div class="suivant">
+                <a href="programmation.html"> >> </a>
+            </div>
+        </div>
+    </section>
+    <pre>
+
+
+
+        
+    </pre>
+    <footer class="bg-dark">
+        <hr>
+        <div class="container pb-2 text-center text-md-start">
+          <div class="row col-md-12">
+            <div class="col-lg-3 col-md-2 pb-4"><p class="rab-store"> Rab Store </p></div>
+            <div class="col-lg-3 col-md-4 pb-4">
+              <div class="couleur">
+                <h5 id="contacts">Contacts</h5>
+                <ul>
+                  <li id="toto"><a href="mailto:rabelaiskpechekoug@gmail.com" class="forme2"> rabelaiskpechekou@gmail.com </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 pb-4">
+              <div class="couleur">
+                <h5 id="plan_du_site">Plan du site</h5>
+                <ul>
+                  <li><a href="plan_du_site.html" class="forme2"> cliquez ici </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 pb-4 " id="fofo">
+              <div class="couleur">
+                <div class="row-md-6 pb-2">
+                  <span class="mr-2">
+                   <a href="https://www.facebook.com">  <img src="facebook.png" title="Suivez Rabelais sur Facbook" alt="Logo de facebook" class="photo"></a>
+                  </span>
+                  <span class="mr-2">
+                   <a href="https://t.me/Rabelais">  <img src="telegram.png" alt="Logo de telegram" title="Ecrivez sur telegram à Rabelais" class="photo"></a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            Développé par <a href="administrateur.html" class="forme2"> Rabelais KPECHEKOU </a> | 
+            <span class="couleur"> © Copyrint Août 2021 </span>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

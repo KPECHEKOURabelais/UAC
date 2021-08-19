@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Suite des corrigés de C++ </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Bootstrapp/css/bootstrap.min.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark fixed-top bg-dark">
+          <p id="rab-store">
+              Rab Store
+          </p>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01"
+            aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon " id="#haut"></span>
+          </button>
+    
+          <div class="text-right collapse navbar-collapse" id="navbarsExample01">
+            <ul class="navbar-nav mr-auto  ">
+    
+              <li class="nav-item">
+                <a class="transition" class="nav-link" href="accueil.php" >Accueil</a>
+              </li>    
+              <li class="nav-item">
+                <a class="transition" class="nav-link" href="plan_du_site.php " >Plan du Site</a>
+              </li>
+    
+    
+              <li class="nav-item">
+                <a class="transition" class="nav-link" href="#contacts">Contacts</a>
+              </li>
+    
+            </ul>
+    
+          </div>
+        </nav>
+        <pre>
+
+
+
+
+        </pre>
+      </header>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+      </script>
+      <script>
+        window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')
+      </script>
+      <script src="popper.min.js"></script>
+      <script src="Bootstrapp/js/bootstrap.min.js"></script>
+        <section>
+            <article>
+            <div class="intro">
+              <p class="exo2">  Bienvenu à nouveau ! Continuez avec la lecture des corrigés-type. </p> 
+              <h3> Corrigé de l'exercice 2 :</h3>  
+            </div>
+            <div class="corrige1">
+                <p> #include &nbsp  < iostream > </p>
+                <p> 
+                    using namespace std; <br>
+                    int main(){ <br>
+                    &nbsp int n(0),som(0),p(1),pg(0); <br>
+                    &nbsp float moy(0.0); <br>
+                    &nbsp cout<<"Entrer un nombre entier : \n"; <br>
+                    &nbsp cin>>n; <br>
+                    &nbsp pg=n; <br>
+                    &nbsp som=n; <br>
+                    &nbsp while(n!=0){ <br>
+                    &nbsp &nbsp &nbsp cout<<"Entrer un autre entier : \n"; <br>
+                    &nbsp &nbsp &nbsp  cin>>n;<br>
+                    &nbsp &nbsp &nbsp &nbsp if(pg< n){ <br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp  pg=n;<br>
+                    &nbsp &nbsp &nbsp &nbsp } <br>
+                    &nbsp &nbsp &nbsp &nbsp som+=n; <br>
+                    &nbsp &nbsp &nbsp &nbsp p++; <br>
+                    &nbsp } <br>
+                    &nbsp moy=1.0*som/(p-1); <br>
+                    &nbsp cout<<"Le plus grand nombre est "<< pg<< endl;<br>
+                    &nbsp cout<<"La moyenne donne " << moy; <br>
+                }
+                </p>
+
+            </div>  
+            <h3> Correction de l'exercice 3 : </h3>
+            <div class="corrige1">
+                <p> #include< iostream > </p>
+                <p>
+                    using namespace std; <br>
+                    int main(){ <br>
+                    const int n=10; <br>
+                    int age[n],i,p(0); <br>
+                    &nbsp for(i=0;i< n;i++){ <br>
+                    &nbsp &nbsp cout<<"Entrer l'age de l'enfant "<< i+1<<" : \n"; <br>
+                    &nbsp &nbsp cin>>age[i]; <br>
+                    &nbsp } <br>
+                    &nbsp for(i=0;i< n;i++){ <br>
+                    &nbsp &nbsp &nbsp if(age[i]<=10){ <br>
+                    &nbsp &nbsp &nbsp &nbsp p++; <br>
+                    &nbsp &nbsp &nbsp} <br>
+                    &nbsp &nbsp } <br>
+                    &nbsp cout<<"Le nombre d'enfant est : "<< p; <br>
+                    &nbsp } 
+                </p>
+            </div>
+            <h3> Corrigé de l'exercice 4 : </h3>
+            <div class="corrige1">
+                <p> #include< iostream > </p>
+                <p>
+                using namespace std; <br>
+                float cube(float r){ <br>
+                &nbsp &nbsp return r*r*r; <br>
+                } <br>
+                int main(){ <br>
+                &nbsp &nbsp const float pi=3.1416; <br>
+                &nbsp &nbsp float rayon(0.0),volume(0.0); <br>
+                &nbsp &nbsp &nbsp cout<<"Entrer le rayon de la sphere : \n"; <br>
+                &nbsp &nbsp &nbsp cin>>rayon; <br>
+                &nbsp &nbsp &nbsp volume=1.0*4/3*pi*cube(rayon); <br>
+                &nbsp &nbsp &nbsp cout<<"Le volume de cette sphere donne "<< volume; <br>
+                }
+                </p>
+            </div>
+            <h3>  BONUS :</h3> 
+            <p> Bénéficier à présent de quelques exercices corrigés ! Régalez-vous !</p>
+            <h3> EXERCICE 1 : </h3>
+            <ol>
+                <li>
+             	Ecrire un programme qui demande à l’utilisateur de saisir un entier N et qui affiche le nombre de nombres premiers 
+                inférieurs ou égaux à N.
+                </li>
+                <li> 
+                    	On considère la suite hongroise : u(0)=a (a entier). Si u(n) pair alors u(n+1)=u(n)/2 sinon u(n+1) = 3*u(n)+1.
+                        Pour toutes les valeurs a, il existe un entier N tel que u(N)= 1 (conjecture admise). Ecrire un programme qui
+                        demande à l’utilisateur de taper a et qui affiche toutes les valeurs de u(n) de n=1 a n=N.
+                </li>
+                <li>
+                        Ecrire un programme qui saisit 2 tableaux de 10 entiers a et b qui doivent être triés dans l’ordre croissant. 
+                        Le programme devra tout d’abord vérifier que les deux tableaux sont triés. Le tableau c est un tableau de 20 entiers. Le programme doit mettre dans le tableau c la fusion des tableaux a et b. Le tableau c devra contenir les éléments de a et ceux de b et devra être trié. Le programme affiche ensuite le tableau c. 
+
+                </li>
+            </ol>
+            <h3> Solutions </h3>
+            <div>
+                <ol style="list-style-type : lower-roman">
+                    <li class="corrige1">
+                    <p> #include < iostream > </p> 
+                    <p>
+                    using namespace std; <br>
+                    int main(){ <br>
+                    int n,i,j,p,d,m,nombre(0); <br>
+                    do{ <br>
+                    cout<<"Entrer un entier :"; <br>
+                    cin>>n; <br>
+                    &nbsp &nbsp for(j=1;j<=n;j++){ <br>
+                    &nbsp &nbsp  &nbsp p=0; <br>
+                    &nbsp &nbsp &nbsp d=0; <br>
+                    &nbsp &nbsp &nbsp  m=0; <br>
+                    &nbsp &nbsp &nbsp &nbsp for(i=1;i<=j;i++){ <br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp if(j%i==0){ <br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp p++; <br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp if(i==1){ <br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   d++;<br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp } <br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp if(i==j){ <br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  m++; <br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  } <br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp } <br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp } <br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp if(p==(d+m)){ <br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp nombre++; <br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp } <br>
+                    &nbsp &nbsp &nbsp &nbsp } <br>
+                    &nbsp &nbsp cout<<"Le nombre de nombres premiers est "<< nombre<< endl; <br>
+                     }while(n==0); <br>
+                    }
+
+                    </p>
+  
+                    </li>
+                    <li class="corrige1">
+                        <pre>
+                        #include < iostream >
+using namespace std;
+int main(){
+    int a,n,u;
+    cout<<"Le but de ce programme est de permettre de trouver a partir du nombre que vous saisirez les valeurs de Un de n=1 a un certain entier N \n ";
+    do{
+       cout<<"Entrer un nombre entier positif : \n";
+       cin>>a;
+     }while(a< 0);
+    n=0;
+    u=a;
+    cout<<"Nous avons donc comme resultat : \n";
+    do{
+        n++;
+        if(u%2==0){
+            u=u/2;
+        }
+        else{
+            u=(3*u)+1;
+        }
+        cout<<"u(" << n<< ")="<< u<< endl;
+
+    }while(u!=1);
+}
+                        </pre>
+                    </li>
+                    <li class="corrige1">
+                        <pre>
+                        #include < iostream >
+//Programme permettant de detecter si le contenu d'un tableau est trié
+using namespace std;
+int trie(int nombre[],unsigned int const n){
+    int i,j,p(0);
+    for(i=0;i< n;i++){
+       for(j=i+1;j< n;j++){
+           if(nombre[i]>nombre[j]){
+               p=nombre[i];
+               nombre[i]=nombre[j];
+               nombre[j]=p;
+           }
+         }
+      }
+}
+int remplissage(int nombre[],unsigned const int n){
+    for(int i=0;i< n;i++){
+        cout<<"Entrer un entier : \n";
+        cin>>nombre[i];
+    }
+    cout<< endl;
+}
+int main(){
+    const int n=10,m=20;
+    int i,tab1[n],tab2[n],c[m];
+    cout<<"Remplissez les entiers du premier tableau : \n";
+    remplissage(tab1,10);
+    cout<<"Remplissez les entiers du second tableau : \n";
+    remplissage(tab2,10);
+    trie(tab1,10);
+    trie(tab2,10);
+    for(i=0;i< n;i++){
+       c[i]=tab1[i];
+    }
+    for(i=0;i< n;i++){
+       c[i+n]=tab2[i];
+    }
+    cout<<"Voici le tableau resultant de la fusion des deux tableaux tries.\n";
+    for(i=0;i< m;i++){
+       cout<< c[i]<<" ";
+    }
+    cout<<"\n"<< endl;
+    cout<<"Nous avons finalement ce tableau de 20 entiers.\n ";
+    trie(c,20);
+    for(i=0;i< m;i++){
+        cout<< c[i]<<" ";
+    }
+    cout<<"\n";
+}
+
+
+                        </pre>
+                    </li>
+                </ol>
+
+            </p>
+            <h3> EXERCICE 2 : </h3>
+            <ol class="exo2">
+                <li>
+                     Ecrire une fonction estPremier ayant en paramètre un entier et qui renvoie un booléen : true si l’entier est premier et false sinon.
+                </li>
+                <li>
+                Ecrire une fonction nPremier ayant comme paramètre un entier n et qui renvoie le nième nombre premier ; cette fonction utilisera la fonction du estPremier
+                </li>
+                <li>
+                Tester la fonction nPremier dans la fonction main.
+                </li>
+                <li>
+                Donner le résultat lorsqu’on appelle cette fonction avec le paramètre 25
+                </li>
+            </ol>
+            <div class="exo1">
+            &nbsp &nbsp <strong style="text-decoration: underline;"> NB :</strong> <em> Prototyper les deux fonctions.</em>
+            </div>
+          <h3> Correction :  </h3>
+				<div class="corrige1">
+                    <pre>
+#include < iostream > 
+using namespace std;
+bool estPremier(int n);
+int nPremier(int n);
+int main(){
+    int n(0),choix(0);
+    cout<<"Entrer un entier : \n";
+    cin>>n ;
+    cout<<"Le nombre premier occupant la position "<< n<<" est "<< nPremier(n)<<".\n";
+}
+bool estPremier(int n){
+    int i;
+    for(i=2;i<=(n-1);i++){
+       if(n%i!=0){
+           return true;
+       }
+       else{
+           return false;
+       }
+   }
+}
+int nPremier(int n){
+    int p(0),i(0);
+    do{
+       p++;
+       if(estPremier(p)){
+         i++;
+       }
+    }while(i!=n);
+    return p;
+}
+
+Pour n=25, on aurait :
+int main(){
+    int n(0),choix(0);
+    cout<<"Entrer un entier : \n";
+    cin>>n ;
+    cout<<"Le nombre premier occupant la position "<< n<<" est "<< nPremier(n)<<".\n";
+}
+
+                    </pre>
+                </div>
+
+            </div>
+            </article>
+        </section>
+        <pre>
+
+
+
+        
+        </pre>
+        <footer class="bg-dark">
+            <hr>
+            <div class="container pb-2 text-center text-md-start">
+              <div class="row col-md-12">
+                <div class="col-lg-3 col-md-2 pb-4"><p class="rab-store"> Rab Store </p></div>
+                <div class="col-lg-3 col-md-4 pb-4">
+                  <div class="couleur">
+                    <h5 id="contacts">Contacts</h5>
+                    <ul>
+                      <li id="toto"><a href="mailto:rabelaiskpechekoug@gmail.com" class="forme2"> rabelaiskpechekou@gmail.com </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-3 pb-4">
+                  <div class="couleur">
+                    <h5 id="plan_du_site">Plan du site</h5>
+                    <ul>
+                      <li><a href="plan_du_site.php" class="forme2"> cliquez ici </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-3 pb-4 " id="fofo">
+                  <div class="couleur">
+                    <div class="row-md-6 pb-2">
+                      <span class="mr-2">
+                       <a href="https://www.facebook.com">  <img src="facebook.png" title="Suivez Rabelais sur Facbook" alt="Logo de facebook" class="photo"></a>
+                      </span>
+                      <span class="mr-2">
+                       <a href="https://t.me/Rabelais">  <img src="telegram.png" alt="Logo de telegram" title="Ecrivez sur telegram à Rabelais" class="photo"></a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="info">
+                Développé par <a href="administrateur.php" class="forme2"> Rabelais KPECHEKOU </a> | 
+                <span class="couleur"> © Copyrint Août 2021 </span>
+              </div>
+            </div>
+          </footer>
+</body>
+</html>

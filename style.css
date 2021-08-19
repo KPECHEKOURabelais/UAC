@@ -1,0 +1,270 @@
+body{
+   background-color: darkseagreen;
+   background : url(mWE8aq.jpg) no-repeat ;
+
+}
+section{
+    width: 95%;
+    margin: auto;
+    
+}
+.baniere-image img{
+    width: 600px;
+    height: 400px;
+    border-radius: 25px;
+    margin: 0 50px 50px 300px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.7);
+}
+
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#accueil h2{
+    text-align: center;
+    color: darkgrey;
+}
+h3{
+    text-align: center;
+}
+
+.discours{
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.7);
+    padding: 10px;
+    margin: 0 20px 10px 20px;
+    background:darkgrey;
+}
+/*Plan du site */
+#planduSite ul, #planduSite{
+    list-style-type: none;
+    font-size: x-large;
+    text-align: justify;
+    margin: 0 0 0 120px;
+}
+/* Triangle servant de puce */
+#planduSite span{
+    font-size: 20px;
+}
+@font-face{
+    font-family: 'Aquiline';
+    src: url(Aquiline/AquilineTwo.ttf);
+    font-family: 'montserra (1)';
+    src: url(Montserrat-BoldItalic.otf);
+}
+.discours .rab, .rab{
+    font-family: 'Aquiline','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+}
+.education{
+    font-family: 'montserra (1)','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* Responsivité de la page de PLAN */
+@media screen and (max-width:780px) {
+    #planduSite ul, #planduSite{
+        margin:0;
+    }
+    #planduSite{
+        margin: 7px;
+    }
+    .baniere-image img{
+        width: 400px;
+        height: 300px;
+        border-radius: 25px;
+        margin: 0 0 20px 0;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+    }
+    /* Corrigé */
+    .tab-corrige, .corrige1{
+        padding: 0 100px 0 200px;
+       line-height: 20px;
+       width: 400px;
+       position: relative;
+       right: 100px;
+       text-align: left;
+       margin: 0 200px 0 0;
+    }    
+}
+/* Voltaire */
+.auteur img, .auteur1 img, .auteur2 img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin:0 0 0 20px;
+}
+.auteur1 img, .auteur2 img{
+    margin: 0 0 0 50px;
+}
+.auteur1, .auteur, .auteur2{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 25px;
+}
+.auteur h3, .auteur1 h3, .auteur2 h3{
+    text-align: center;
+}
+.citation, .oeuvre1, .oeuvre2{
+    background: whitesmoke;  
+    border-left: 5px solid brown;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.7);
+}
+.citation, .description2{
+    padding: 10px;
+    text-align: center;
+}
+.description1, .description2{
+    margin: 0 50px 0 150px;
+}
+.oeuvre1, .oeuvre2{
+    padding: 10px ;
+}
+/* Voltaire Responsivité */
+@media screen and (max-width:780px) {
+    .auteur, .auteur1, .auteur2{
+        display: flex;
+        flex-direction: column;
+    }   
+    .auteur img, .auteur2 img, .auteur1 img{
+        margin: auto;
+    }
+    .citation{
+        padding: 0 0 0 10px;
+        margin: 0 10px 0  10px;
+    }
+    .description1, .description2{
+        margin: 0 ;
+    }
+}
+
+/* Page sur algorithme */
+section .algo{
+    text-align: justify;
+    width: 80%;
+    margin: auto;
+}
+.puce{
+    font-size: 25px;
+}
+#exo1, #exo2, #exo3{
+    padding-bottom: 100px;
+}
+.tab-corrige, .corrige1{
+    margin: 0 0 0 100px;
+   background-color: rgba(0,0,0,0.6);
+   color:honeydew;
+   border-left: 8px solid rgba(0,0,0,0.7);
+   border-radius: 1px;
+   box-shadow: 2px 2px 2px rgba(0,0,0,0.7);
+   padding: 0 0 0 100px;
+   line-height: 30px;
+}
+.algo h1, .programmation h1{
+    text-align: center;
+    background-color: darkkhaki;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+.precedent, .suivant{
+    border: 2px solid #dedede;
+    padding: 1px 20px 1px 20px;
+    margin: 0 5px 0 0;
+    border-radius: 4px;
+    background-color: darkslategray;
+}
+.precedent a, .suivant a{
+    color: whitesmoke;
+}
+.precedent a:hover, .suivant a:hover, .encouragement a:hover, .encouragement1 a:hover{
+    color: black;
+    text-decoration: none;
+}
+.precedent:hover, .suivant:hover, .encouragement a:hover, .encouragement1 a:hover{
+    background: whitesmoke;
+}
+.encouragement a, .encouragement1 a{
+    background: burlywood;
+    border: 2px solid #dedede;
+    padding: 1px 20px 1px 20px;
+    margin: 0 5px 0 0;
+    border-radius: 4px;
+}
+.encouragement1{
+    text-align: center;
+}
+
+/* Page sur programmation n C++ */
+.exo1, .exo2, .exo3{
+    text-align: justify;
+    width: 80%;
+    margin: auto;
+}
+.suite-corrigé{
+    text-align: center;
+}
+.suite-corrigé a:hover{
+    color: black;
+    text-decoration: underline;
+}
+/* Description dans la page du Développeur */
+
+.developpeur img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 2px rgba(0,0,0,0.6);
+}
+.developpeur img:hover{
+    width: 220px;
+    height: 220px;
+}
+.bloc-objectif{
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+    background-color: darkgray;
+    padding: 50px;
+    box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.7);
+    text-align: justify;
+}
+.developpeur:first-child{
+    text-align: center;
+}
+em{
+    font-weight: bold;
+    font-style: italic;
+    font-size: large;
+}
+.bloc-objectif:hover{
+    background-color: rgba(0,0,0,0.6);
+    color: whitesmoke;
+    height: 400px;
+    padding: 100px;
+}
+.objectif{
+    width: 800px;
+}
+
+@media screen and (max-width:780px) {
+    .bloc-objectif{
+        flex-direction: column;
+    } 
+    .developpeur img{
+        margin: auto;
+        width: 300px;
+        height: 350px;
+    }  
+    .objectif{
+        padding: 20px 0 0 0;
+        width: 300px;
+    }
+    .bloc-objectif:hover{
+        background-color: rgba(0,0,0,0.6);
+        color: whitesmoke;
+        height: 1000px;
+        padding: 50px 0 0 50px;
+    }
+}

@@ -1,0 +1,57 @@
+@font-face{
+    font-family: 'Aquiline';
+    src: url(AquilineTwo.ttf);
+}
+/* Rab store du header  */
+#rab-store{
+    font-family: 'Aquiline','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #f7f7f7;
+    font-weight: 1200;
+    font-size: xx-large;
+    box-shadow: 5px 5px 10px black;
+    padding: 0 20px 5px 15px ;
+}
+/* Rab Store du footer */
+.rab-store{
+    font-family: 'Aquiline','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #f7f7f7;
+    font-weight: 1200;
+    font-size: xx-large;
+    box-shadow: 5px 5px 10px black;
+    padding: 1px 5px 5px 15px ;
+    margin: 20px 0 0 0;
+}
+/* Photo de facebook et Telegram */
+.photo{
+    width: 30px;
+    height: 30px;
+}
+/* Rab Store apparence au survol de la souris */
+.rab-store:hover, #rab-store:hover{
+    background-color: whitesmoke;
+    color: #272727;
+    height: 70px;
+}
+/*LES LIENS */
+a,.text-right ul, footer ul{
+    color: chocolate;
+    text-decoration: none;
+    list-style-type: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: whitesmoke;
+}
+footer a{
+    color: chocolate;
+}
+/*Les H5 du footer et l'element copyright */
+footer h5, .info{
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 780px) {
+    footer{
+        position: inherit;
+    }
+}

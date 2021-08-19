@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Programmation en C++ </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Bootstrapp/css/bootstrap.min.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark fixed-top bg-dark">
+          <p id="rab-store">
+              Rab Store
+          </p>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01"
+            aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon " id="#haut"></span>
+          </button>
+    
+          <div class="text-right collapse navbar-collapse" id="navbarsExample01">
+            <ul class="navbar-nav mr-auto  ">
+    
+              <li class="nav-item">
+                <a class="transition" class="nav-link" href="accueil.php" >Accueil</a>
+              </li>    
+              <li class="nav-item">
+                <a class="transition" class="nav-link" href="plan_du_site.php " >Plan du Site</a>
+              </li>
+    
+    
+              <li class="nav-item">
+                <a class="transition" class="nav-link" href="#contacts">Contacts</a>
+              </li>
+    
+            </ul>
+    
+          </div>
+        </nav>
+        <pre>
+
+
+
+
+        </pre>
+      </header>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+      </script>
+      <script>
+        window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')
+      </script>
+      <script src="popper.min.js"></script>
+      <script src="Bootstrapp/js/bootstrap.min.js"></script>
+    <section>
+        <article class="programmation">
+            <h1> Programmation en C++ </h1>
+        </article>
+        <div class="encouragement1">
+                <p>
+                    Encourager l'auteur du site web 
+                </p>
+                <a href="tel:+22999803579"> Donation </a>
+                <pre>
+            
+                </pre>  
+        </div>
+        <div class="exo1">
+            <h3> EXERCICE 1 : </h3>
+            <p>
+            Ecrire un programme C++  qui affiche la somme des n premiers entiers naturels, n étant un entier saisi au clavier.
+            </p>
+
+        </div>
+        <div class="exo2">
+            <h3> EXERCICE 2 :</h3>
+            <p>
+            Une suite de nombres est terminée par le nombre 0. L’utilisateur saisit ces nombres les uns après les autres et on veut : 
+            <ol>
+                <li> Calculer la moyenne des nombres  saisis ; </li>
+                <li> Déterminer le plus grand nombre. </li>
+            </ol>
+        Ecrire un programme C++ qui affiche la moyenne des nombres saisis ainsi que le plus grand nombre.
+
+            </p>
+        </div>
+        <div class="exo3">
+            <h3> EXERCICE 3 : </h3>
+            <p>
+            On dispose sous forme d’un tableau des âges d’une population de 50 personnes. On désire connaître le nombre d’enfants (un enfant est une personne dont l’âge est inférieur ou égal à 10).
+            <ol>
+                <li> Ecrire un programme qui déclare  le tableau qui contiendra les 50 âges (tableau d’entier ) </li>
+                <li> Lire les 50 âges ; </li>
+                <li> Déterminer et afficher le nombre d’enfant. </li>
+            </ol>
+
+            </p>
+        </div>
+        <h3> Corrigé Exo 1 </h3>
+        <div class="corrige1">
+            <p> #include &nbsp < iostream  > </p>
+            <p>
+            using namespace std; <br> 
+            int main(){ <br>
+            int n(0),som(0); <br>
+            cout<<"Entrer un nombre entier : \n"; <br>
+            cin>>n; <br>
+            for(int i=0;i < n;i++){ <br>
+                &nbsp  &nbsp som+=i; <br>
+                &nbsp &nbsp cout<< som<< endl; <br>
+                &nbsp &nbsp cout<<”La somme de ces “<< n<<” premiers entiers naturels donne “<< som; <br>              
+                &nbsp } <br>
+            } 
+            </p> 
+        </div>
+        <p class="suite-corrigé" id="suite"> 
+            <a href="#suite" title="Contactez Rabelais pour la suite " onclick="alert('Entrer le code d\'accès à la page dans le formulaire ci-dessous.')"> 
+            Lire la suite des corrigés [...]
+             </a>
+        </p>
+        <pre>
+            
+        </pre>
+        <form method="POST" action="suite-corrige.html" onsubmit="return verif(this)">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control form-group" name="code" placeholder="Entrer le code d'àccès " onblur="code(this)">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="submit" value="Valider" class="btn btn-success">
+                    </div>
+                </div>
+            </div>
+           
+        </form>
+        <script>
+             function surligne(champ, erreur){
+                   if(erreur)
+                champ.style.backgroundColor = "#fba";
+                    else
+                champ.style.backgroundColor = "";
+            }
+            function code(champ){
+                if(champ.value != 'Rab@codeSite-accès'){
+                    surligne(champ, true);
+                    return false;
+                }else{
+                    surligne(champ, false);
+                    return true;
+                   
+                }
+            }
+            function verif(champ){
+                var codeOk = code(champ.code);
+                if(codeOk){
+                    return true;
+                }
+                else{
+                    alert('Veuillez entrer un code correct.');
+                    return false;
+                }
+            }
+        </script>
+    </section>
+    <pre>
+
+
+
+        
+    </pre>
+    <footer class="bg-dark">
+        <hr>
+        <div class="container pb-2 text-center text-md-start">
+          <div class="row col-md-12">
+            <div class="col-lg-3 col-md-2 pb-4"><p class="rab-store"> Rab Store </p></div>
+            <div class="col-lg-3 col-md-4 pb-4">
+              <div class="couleur">
+                <h5 id="contacts">Contacts</h5>
+                <ul>
+                  <li id="toto"><a href="mailto:rabelaiskpechekoug@gmail.com" class="forme2"> rabelaiskpechekou@gmail.com </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 pb-4">
+              <div class="couleur">
+                <h5 id="plan_du_site">Plan du site</h5>
+                <ul>
+                  <li><a href="plan_du_site.html" class="forme2"> cliquez ici </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 pb-4 " id="fofo">
+              <div class="couleur">
+                <div class="row-md-6 pb-2">
+                  <span class="mr-2">
+                   <a href="https://www.facebook.com">  <img src="facebook.png" title="Suivez Rabelais sur Facbook" alt="Logo de facebook" class="photo"></a>
+                  </span>
+                  <span class="mr-2">
+                   <a href="https://t.me/Rabelais">  <img src="telegram.png" alt="Logo de telegram" title="Ecrivez sur telegram à Rabelais" class="photo"></a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            Développé par <a href="administrateur.html" class="forme2"> Rabelais KPECHEKOU </a> | 
+            <span class="couleur"> © Copyrint Août 2021 </span>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
